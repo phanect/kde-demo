@@ -1,0 +1,11 @@
+#:schema https://raw.githubusercontent.com/compose-spec/compose-go/refs/heads/main/schema/compose-spec.json
+
+name: kdedemo
+
+services:
+  kdeneon:
+    build: ./docker
+    volumes:
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+    network_mode: host
