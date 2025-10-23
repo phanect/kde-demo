@@ -1,3 +1,17 @@
+[tasks]
+  [tasks.dev]
+  depends = "dev:*"
+
+  [tasks."dev:container"]
+  run = [
+    "podman compose down",
+    "podman compose build --progress=plain",
+    "podman compose up"
+  ]
+
+  [tasks."dev:screen"]
+  run = "Xephyr -screen 1024x768 :7"
+
 [settings]
 jobs = 8
 
