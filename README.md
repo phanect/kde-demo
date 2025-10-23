@@ -1,0 +1,7 @@
+# KDE demo
+
+Demo containers for KDE's exhibition
+
+## Set up
+
+sudo apt install podman xserver-xephyr
